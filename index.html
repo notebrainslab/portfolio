@@ -41,8 +41,8 @@
                                     technologies: [],
                                         colorMapping: { },
                             init() {
-                                this.technologies = technologies_array.map(tech => tech.name);
-                                this.colorMapping = technologies_array.reduce((acc, tech) => {
+                                this.technologies = technologies.map(tech => tech.name);
+                                this.colorMapping = technologies.reduce((acc, tech) => {
                                     acc[tech.name] = tech.color;
                                     return acc;
                                 }, {});
