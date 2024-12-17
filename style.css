@@ -42,10 +42,13 @@ margin-top: 23px !important;
     line-height: 135%;
     text-decoration: none;
 }
+.dropsec{
+    margin-top: -6px;
+}
 
 .feature-card {
     border: 1px solid #e2e2e2;
-    border-radius: 1.875vw;
+    border-radius: 10px;
     padding: 2.5vw;
 }
 
@@ -434,6 +437,6 @@ button:focus:not(:focus-visible) {
 
 .newsecback {
     padding: 2.5vw;
-    border-radius: 1.875vw;
+    border-radius: 10px;
     box-shadow: .078vw .078vw .586vw #0000001a;
 }

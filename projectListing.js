@@ -194,8 +194,13 @@ const appendCard = (item, index) => {
 
                     <div class="newclass">
                         <h2 class="mb-4 subtitle">${item.title}</h2>
-                        <p class="mb-4 subtitle">${item.technologies?.map(ele => ele)}</p>
+                        <p class="mb-4 subtitle hidden">${item.technologies?.map(ele => ele)}</p>
                         <p class="subparanew">${item.description}</p>
+                        <button class="mt-8">
+                                <span class="edge"></span>
+                                <span class="front text"> Know more
+                                </span>
+                              </button>
                     </div>
                 </div>
                 <!-- Right Section (Image Slider) -->

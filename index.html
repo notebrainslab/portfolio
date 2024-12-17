@@ -36,31 +36,28 @@
                 <div class="col-span-1 space-y-4 sticky allbtn">
                     <div class="w-full max-w-md dropsec">
                         <div x-data="{
-                                open: false,
+                            open: false,
                                 selected: [],
-                                technologies: ['React', 'Node.js', 'Python', 'TypeScript', 'Rust', 'Go', 'Docker', 'Kubernetes'],
-                                colorMapping: {
-                                    'React': 'bg-blue-100 text-blue-800',
-                                    'Node.js': 'bg-green-100 text-green-800',
-                                    'Python': 'bg-purple-100 text-purple-800',
-                                    'TypeScript': 'bg-indigo-100 text-indigo-800',
-                                    'Rust': 'bg-orange-100 text-orange-800',
-                                    'Go': 'bg-teal-100 text-teal-800',
-                                    'Docker': 'bg-blue-200 text-blue-900',
-                                    'Kubernetes': 'bg-purple-100 text-purple-800'
-                                },
-                                toggleTech(tech) {
-                                    if (this.selected.includes(tech)) {
-                                        this.selected = this.selected.filter(t => t !== tech);
-                                    } else {
-                                        this.selected.push(tech);
-                                    }
-                                    // Call the function from projectListing.js
-                                    if (typeof findDropdownValue === 'function') {
-                                        findDropdownValue(this.selected);
-                                    }
+                                    technologies: [],
+                                        colorMapping: { },
+                            init() {
+                                this.technologies = technologies_array.map(tech => tech.name);
+                                this.colorMapping = technologies_array.reduce((acc, tech) => {
+                                    acc[tech.name] = tech.color;
+                                    return acc;
+                                }, {});
+                            },
+                            toggleTech(tech) {
+                                if (this.selected.includes(tech)) {
+                                    this.selected = this.selected.filter(t => t !== tech);
+                                } else {
+                                    this.selected.push(tech);
                                 }
-                            }" class="relative">
+                                if (typeof findDropdownValue === 'function') {
+                                    findDropdownValue(this.selected);
+                                }
+                            }
+                        }" class="relative" x-init="init()">
                             <!-- Trigger -->
                             <div @click="open = !open"
                                 class="bg-white border border-gray-300 p-3 cursor-pointer hover:border-blue-500 transition-all duration-300 flex flex-wrap gap-2 min-h-[50px] shadow-sm inputnewsec">
