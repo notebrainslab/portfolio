@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    --white-color: 255, 255, 255;
+    --black-color: 0, 0, 0;
+    font-family: "Archivo", sans-serif;
+}
+
+.headtitle {
+    color: #2d2d2d;
+    letter-spacing: -.1rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.backcolor {
+    background-color: #f9f9f9;
+}
+
+.allbtn a {
+    padding: 0;
+    margin-top: 20px !important;
+}
+
+/* .allbtn a:first-child{
+margin-top: 23px !important;
+} */
+.allbtn a:hover {
+    background-color: transparent;
+}
+
+.subpara {
+    color: #8a8a8a;
+    font-size: 1.25vw;
+    line-height: 135%;
+    text-decoration: none;
+}
+
+.feature-card {
+    border: 1px solid #e2e2e2;
+    border-radius: 1.875vw;
+    padding: 2.5vw;
+}
+
+.maindiv ul li a.text-amber-400.font-semibold.block {
+    color: #8a8a8a;
+    text-transform: uppercase;
+    font-size: .938vw;
+    font-weight: 700;
+    line-height: 115%;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.newclass {
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    display: flex;
+}
+
+.maindiv ul {
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+
+
+.imgsecslider {
+    background-color: #fcfcfc;
+    border-radius: .938vw;
+    flex: none;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    box-shadow: .078vw .078vw .586vw #0000001a;
+}
+
+.subtitle {
+    color: #2d2d2d;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.875vw;
+    font-weight: 700;
+    line-height: 95%;
+    text-decoration: none;
+}
+
+.subparanew {
+    color: #8a8a8a;
+    font-size: .938vw;
+    line-height: 135%;
+    text-decoration: none;
+}
+
+.newatag {
+    font-size: .938vw;
+    line-height: 135%;
+    color: #333;
+}
+
+/* a.newatag.block.p-4.m-0.bg-gray-100.rounded-lg.transition-colors.text-amber-400.font-semibold {
+    font-weight: 700;
+    color: #fcb731;
+} */
+
+.btsec {
+    border-radius: 1.875vw;
+}
+
+/* scrollbar start */
+
+/* width */
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #fbbf24 0%, #fbbf24 100%);
+    transition: var(--transition-05s);
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #fbbf24 0%, #fbbf24 100%);
+    border-radius: 0px;
+}
+
+body::-webkit-scrollbar-button {
+    background: no-repeat center center / 60%;
+    height: 8px;
+    width: 8px;
+    /* -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2); */
+    cursor: pointer;
+}
+
+body::-webkit-scrollbar-button:vertical:increment {
+    /* background-image: url(../image/scroll-down.svg); */
+}
+
+body::-webkit-scrollbar-button:vertical:decrement {
+    /* background-image: url(../images/scroll-up.svg); */
+}
+
+.scrollsec::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    cursor: pointer;
+}
+
+.scrollsec::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #fbbf24 0%, #fbbf24 100%);
+    transition: var(--transition-05s);
+    border-radius: 10px;
+}
+
+.scrollsec::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+
+
+/* .feature-card {
+    margin-top: 2rem;
+} */
+
+.allbtn {
+    top: 1rem;
+}
+
+.rightsidecard {
+    margin-top: -30px;
+}
+
+.dropsec .hover\:border-blue-500:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.inputnewsec {
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+}
+
+
+
+#scrollspy {
+    /* padding-top: 10px; */
+    position: sticky;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a {
+            font-size: .938vw;
+            line-height: 135%;
+            text-decoration: none;
+            color: #333333;
+            transition: color 0.2s;
+
+            &:hover {
+                color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+            }
+        }
+
+        .current {
+            color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+            font-weight: 600;
+        }
+
+    }
+}
+
+.content {
+    flex: grow;
+}
+
+.scroll-wrapper {
+    flex: 0 0 300px;
+}
+
+.rightsidecard h4 {
+    opacity: 0;
+}
+
+.ctasec {
+    border-radius: 1.875vw;
+}
+
+.newul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: self-start;
+}
+
+.newul a:hover {
+    text-decoration: none;
+}
+
+.newsec3 {
+    margin-top: 0 !important;
+}
+
+.newclass p.subtitle {
+    width: 400px;
+    word-wrap: break-word;
+}
+
+.backctacolor {
+    background-color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.common-section {
+    /* margin-top: 200px; */
+    padding: 80px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.technologies-img {
+    width: 100%;
+    height: 340px;
+    margin-top: 40px;
+}
+
+.technologies-img img {
+    object-fit: contain;
+}
+
+.ourtechnologies-list {
+    display: grid;
+    gap: 10px;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(6, 1fr);
+    /* width: calc(100% + 45%); */
+}
+
+.ourtechnologies-list li:last-child,
+.ourtechnologies-list li:nth-last-child(2),
+.ourtechnologies-list li:nth-last-child(3),
+.ourtechnologies-list li:nth-last-child(4) {
+    display: none;
+}
+
+.ourtechnologies-list li>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-family: var(--open-sans-font);
+    background: rgba(var(--white-color), 1);
+    box-shadow: 0px 0px 10px -2px rgba(var(--black-color), 0.2);
+    padding: 10px 3px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    gap: 8px;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+}
+
+.ourtechnologies-list li>*:hover {
+    transform: scale(1.3);
+}
+
+.tech-img,
+.ourtechnologies-list li>*>*:first-child {
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+.tech-img img,
+.ourtechnologies-list li>*>*:first-child img {
+    object-fit: contain;
+    height: 36px;
+}
+
+.ourtechnologies-list li span {
+    color: rgba(var(--black-color), 1);
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 6px;
+    line-height: 1.3;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left, hsl(43.18deg 96.4% 56.47%) 0%, hsl(43.26deg 96.41% 56.27%) 8%, hsl(43.2deg 96.15% 59.22%) 92%, hsl(43.26deg 96.41% 56.27%) 100%);
+}
+
+.front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(0deg 0% 0%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.newsecback {
+    padding: 2.5vw;
+    border-radius: 1.875vw;
+    box-shadow: .078vw .078vw .586vw #0000001a;
+}
